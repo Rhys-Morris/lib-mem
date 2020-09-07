@@ -1,0 +1,180 @@
+// Global Reset
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    // Typography
+    font-size: 62.5%;   // 1rem = 10px
+    font-family: 'Noto Sans JP', sans-serif; // 300, 400
+    font-weight: 400;
+
+    // Background
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, .8), rgba(0, 0, 0, .7)),
+        url(/source/images/bg-image.jpg);
+    background-size: cover;
+    background-position: top;
+
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 3rem;
+
+    background-color: rgb(126, 37, 37);
+}
+
+.headings {
+    display: flex;
+    align-items: center;
+    color: #f2f2f2;
+}
+
+.heading-1 {
+    font-family: 'Lobster', cursive;
+    letter-spacing: .2rem;
+    font-size: 4rem;
+    margin-right: 2rem;
+}
+
+.heading-2 {
+    word-spacing: .2rem;
+    font-size: 1.8rem;
+    position: relative;
+    top: .3rem;
+}
+
+.button-container {
+    height: 6rem;
+    width: 12rem;
+    border-radius: 2rem;
+}
+
+.btn {
+    outline: none;
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    border: 2px solid #f2f2f2;
+    background-color: rgb(126, 37, 37);
+    color: #f2f2f2;
+    font-size: 2rem;
+    position: relative;
+    transition: .2s all;
+}
+
+.btn:hover {
+    background-color: rgb(2, 117, 2);
+    transform: translateY(-.2rem);
+    box-shadow: 0 .5rem 1rem rgba(#000, .25);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+#new-form-container {
+    display: flex;
+    justify-content: center;
+
+    background-color: rgba(#000, .7 );
+}
+
+#book-display {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    padding: 2rem;
+}
+
+.book-card {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 2rem;
+    width: 20rem;
+    border: 2px solid #f2f2f2;
+    margin: 1rem 1rem;
+    border-radius: .5rem;
+
+    background-color: rgb(126, 37, 37);
+
+    &__span {
+        font-size: 1.4rem;
+        padding: .3rem;
+        color: #f2f2f2;
+    }
+
+    &__read {
+        padding: 1rem;
+        width: 50%;
+        border: 1px solid #f2f2f2;
+        color: #f2f2f2;
+        border-radius: .5rem;
+        outline: none;
+
+        &__no {
+            background-color: maroon;
+        }
+
+        &__yes {
+            background-color: green;
+        }
+    }
+}
+
+.card-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+}
+
+.remove-from-library {
+    align-self: flex-end;
+    font-size: 1.5rem;
+    padding: .5rem;
+    font-weight: bold;
+    color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    background-color: maroon;
+
+}
+
+.add-book {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.6rem;
+    margin: 5rem 0;
+
+    &__text-input {
+        width: 30vw;
+        padding: 1.5rem 2rem;
+    }
+
+    &__submit {
+        width: 5vw;
+    }
+
+    &__read {
+        padding: 1rem;
+    }
+
+    &__read-label {
+        font-size: 1.4rem;
+        padding: .3rem;
+        color: #f2f2f2;
+        display: inline;
+        margin-right: 1rem;
+    }
+}
