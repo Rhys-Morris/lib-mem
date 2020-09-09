@@ -14,8 +14,8 @@ html {
 
     // Background
     background-image: 
-        linear-gradient(to bottom, rgba(0, 0, 0, .8), rgba(0, 0, 0, .7)),
-        url(/source/images/bg-image.jpg);
+        linear-gradient(to bottom, rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)),
+        url(/../source/images/bg-image.jpg);
     background-size: cover;
     background-position: top;
 
@@ -28,7 +28,14 @@ html {
     justify-content: space-between;
     padding: 1.5rem 3rem;
 
-    background-color: rgb(126, 37, 37);
+    background-color: rgba(126, 37, 37, .9);
+
+    & span {
+        font-size: 1.2rem;
+        width: 8rem;
+        color: #f2f2f2;
+        margin-left: 2rem;
+    }
 }
 
 .headings {
@@ -52,22 +59,24 @@ html {
 }
 
 .button-container {
-    height: 6rem;
-    width: 12rem;
     border-radius: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .btn {
     outline: none;
-    height: 100%;
-    width: 100%;
+    height: 6rem;
+    width: 12rem;
     border-radius: 2rem;
     border: 2px solid #f2f2f2;
-    background-color: rgb(126, 37, 37);
+    background-color: rgba(126, 37, 37, .9);
     color: #f2f2f2;
     font-size: 2rem;
     position: relative;
     transition: .2s all;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -92,8 +101,7 @@ html {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-
-    padding: 2rem;
+    margin: 2.5rem 0;
 }
 
 .book-card {
@@ -101,27 +109,36 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 3rem 2rem;
-    width: 20rem;
+    padding: 1rem 2rem;
+    width: 30rem;
+    height: 20rem;
     border: 2px solid #f2f2f2;
     margin: 1rem 1rem;
     border-radius: .5rem;
 
-    background-color: rgb(126, 37, 37);
+    background-color: rgba(126, 37, 37, .9);
 
     &__span {
-        font-size: 1.4rem;
-        padding: .3rem;
+        font-size: 1.6rem;
+        padding: .5rem 0;
         color: #f2f2f2;
+        font-weight: 300;
+
+        & span {
+            font-size: 1.6rem;
+            margin-right: .8rem;
+            font-weight: 400;
+        }
     }
 
     &__read {
-        padding: 1rem;
-        width: 50%;
-        border: 1px solid #f2f2f2;
+        padding: 1rem 0;
+        width: 30%;
+        border: 2px solid #f2f2f2;
         color: #f2f2f2;
         border-radius: .5rem;
         outline: none;
+        cursor: pointer;
 
         &__no {
             background-color: maroon;
@@ -133,20 +150,24 @@ html {
     }
 }
 
+
+
 .card-buttons {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-top: 2rem;
 }
 
 .remove-from-library {
-    align-self: flex-end;
-    font-size: 1.5rem;
-    padding: .5rem;
-    font-weight: bold;
+    padding: 1rem 0;
+    width: 30%;
+    border: 2px solid #f2f2f2;
     color: #f2f2f2;
-    border: 1px solid #f2f2f2;
+    border-radius: .5rem;
+    outline: none;
     background-color: maroon;
+    cursor: pointer;
 
 }
 

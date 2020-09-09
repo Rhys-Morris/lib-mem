@@ -1,3 +1,7 @@
+// HTML Elements --> for styling
+let cardTitle = document.querySelector(".book-card__span"); // Select book card text content
+
+
 // Define library array
 let myLibrary = [];
 let bookDisplay = document.querySelector("#book-display")
@@ -37,19 +41,19 @@ function printBooks(array) {
         // Append title to card
         let titleDisplay = document.createElement('span');
         titleDisplay.classList.add("book-card__span");
-        titleDisplay.textContent = `Title: ${book["title"]}`;
+        titleDisplay.innerHTML = `<span>Title:</span> ${book["title"]}`;
         newCard.appendChild(titleDisplay)
 
         // Append author to card
         let authorDisplay = document.createElement('span');
         authorDisplay.classList.add("book-card__span");
-        authorDisplay.textContent = `Author: ${book["author"]}`;
+        authorDisplay.innerHTML = `<span>Author:</span> ${book["author"]}`;
         newCard.appendChild(authorDisplay)
 
         // Append page count to card
         let pageCount = document.createElement('span');
         pageCount.classList.add("book-card__span");
-        pageCount.textContent = `Page Count: ${book["pages"]}`;
+        pageCount.innerHTML = `<span>Page Count:</span> ${book["pages"]}`;
         newCard.appendChild(pageCount)
 
         // Append read to card
@@ -71,7 +75,7 @@ function printBooks(array) {
         let deleteFromLibrary = document.createElement('button');
         deleteFromLibrary.classList.add("remove-from-library");
         deleteFromLibrary["data-card"] = book["title"];     // Link remove button to card
-        deleteFromLibrary.textContent = "X"
+        deleteFromLibrary.textContent = "Remove"
         buttons.appendChild(deleteFromLibrary);
         newCard.appendChild(buttons);
 
